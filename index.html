@@ -14,7 +14,8 @@
           },
           h = d.documentElement,
           t = setTimeout(function () {
-            h.className = h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
           }, config.scriptTimeout),
           tk = d.createElement('script'),
           f = false,
@@ -36,10 +37,72 @@
       })(document);
     </script>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
-    <h1>hello 안녕하세요</h1>
-    <h2>home branch 생성</h2>
+    <!-- home/민경 -->
+    <div id="home_wrap">
+      <!-- home_header -->
+      <header id="home_header_wrap">
+        <div id="logo_top">
+          <h3>MOVIE</h3>
+        </div>
+        <nav id="home_nav">
+          <ul id="home_nav_main">
+            <li>
+              <a href="#">HOME</a>
+            </li>
+            <li>
+              <a href="#">MEMBER</a>
+              <ul id="home_nav_sub">
+                <li class="member_nav">
+                  <a href="#">DOHYEON</a>
+                </li>
+                <li class="member_nav">
+                  <a href="#">MINKYOUNG</a>
+                </li>
+                <li class="member_nav">
+                  <a href="#">JOOHA</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="home_header_bg">
+        <p>CHUNGKING<br />EXPRESS</p>
+        <img
+          src="https://assets.mubicdn.net/images/artworks/692689/images-original.png?1718796053"
+          alt="home_header_bg"
+        />
+      </div>
+
+      <!-- home_body -->
+      <main id="home_body_wrap">
+        <section id="home_project_info">
+          <h3>Mini<br />Project</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
+            veritatis corporis, officia ratione perspiciatis tempore asperiores
+            excepturi debitis rem officiis vel nihil, reiciendis odit possimus
+            repudiandae quibusdam quia, ex ab. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Fugiat a aperiam, nesciunt beatae amet
+            harum quae nihil quasi enim ducimus necessitatibus perspiciatis
+            veritatis accusantium doloribus eveniet repellat minima. In,
+            doloremque?
+          </p>
+        </section>
+
+        <article id="home_member_best">
+          <h3>Member's Best Movie</h3>
+          <ul id="member_best_card_wrap">
+            <li class="member_best_card member_best_card_active1">도현</li>
+            <li class="member_best_card member_best_card_active2">민경</li>
+            <li class="member_best_card member_best_card_active3">주하</li>
+          </ul>
+        </article>
+      </main>
+    </div>
   </body>
 </html>
