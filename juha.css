@@ -1,11 +1,136 @@
+* {
+    font-family: 'Pretendard', serif;
+}
+
 body {
     scrollbar-width: 0;
     padding: 0;
     margin: 0;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    .vertical {
+        margin: 0 10px;
+        padding: 0;
+        width: 1px;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+    }
+
+    .vertical_container {
+        position: relative;
+    }
+
+    .vertical_info {
+        margin-left: 21px;
+    }
+
+    .mid_title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 140%;
+    }
+
+    .txt {
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 400;
+    }
+
+    .bg_highlight {
+        background-color: rgb(133, 225, 195);
+    }
+
+    .highlight {
+        color: rgb(133, 225, 195);
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    margin:0;
+    color: white;
+
+    h1 {
+        margin-right: 20px;
+        font-weight: 400;
+        font-size: 22px;
+        text-align: right;
+    }
 }
 
 header {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    
+    background-image: url('https://film-grab.com/wp-content/uploads/photo-gallery/Barbie_11.jpg?bwg=1699879307');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+
+    
+    #header_info {
+        position: relative;
+        z-index: 2;
+        padding: 140px 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+        #title {
+            line-height: 100%;
+            font-size: 58px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        #info_right {
+            width: 460px;
+            text-align: right;
+
+            hr {
+                margin: 12px 0 10px 50%;
+                border: none;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+
+            .txt {
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 700px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%,rgba(0, 0, 0, 0.7) 60%, black 100%);
+        z-index: 1;
+    }
+}
+
+#content_container {
     width: 100vw;
-    height: 500px;
-    border: 1px solid red;
+    height: 1000px;
 }
