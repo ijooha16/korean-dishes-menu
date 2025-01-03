@@ -1,3 +1,4 @@
+/* font */
 /* pretendard regular{
   font-family: "pretendard", sans-serif;
   font-weight: 400;
@@ -9,3 +10,440 @@
   font-weight: 700;
   font-style: normal;
 } */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+
+/* home */
+#home_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  font-family: 'pretendard', sans-serif;
+}
+
+/* header */
+#home_header_wrap {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  #logo_top {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  #home_nav {
+    width: 100%;
+    height: 50px;
+
+    #home_nav_main {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #home_nav_main > li {
+      width: 400px;
+      height: 50px;
+      position: relative;
+    }
+
+    #home_nav_main > li > a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      color: #dcdcdc;
+
+      transition: all 0.3s;
+    }
+
+    #home_nav_main > li > a:hover {
+      background: rgba(255, 255, 255, 0.7);
+      color: #333;
+    }
+
+    #home_nav_sub {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 49.5px;
+      background: rgba(255, 255, 255, 0.2);
+      max-height: 0;
+      overflow: hidden;
+
+      .member_nav {
+        width: 100%;
+        transition: all 0.3s;
+
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+        }
+      }
+
+      .member_nav:hover {
+        background: rgba(255, 255, 255, 0.7);
+        color: #333;
+      }
+    }
+  }
+}
+
+/* header background */
+#home_header_bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: #000;
+  z-index: -100;
+
+  #header_bg_wrap {
+    width: 300vw;
+    height: 100%;
+    display: flex;
+
+    .header_bg_member {
+      width: 100vw;
+      height: 100%;
+    }
+
+    .header_bg_member:nth-child(1) {
+      background: url(./images/chungking_express.png) fixed;
+      background-size: cover;
+
+      .bg_title {
+        position: relative;
+        top: 50%;
+        left: 1500px;
+        width: 200ox;
+        height: 0;
+        transform: translateY(-50%);
+        font-size: 30px;
+      }
+      .bg_member {
+        position: relative;
+        top: 60%;
+        left: 1500px;
+      }
+    }
+    .header_bg_member:nth-child(2) {
+      background: url(./images/Wallace&Gromit.png) fixed;
+      background-size: cover;
+
+      .bg_title {
+        position: relative;
+        top: 50%;
+        left: 350px;
+        width: 200ox;
+        height: 0;
+        transform: translateY(-50%);
+        font-size: 30px;
+      }
+      .bg_member {
+        position: relative;
+        top: 60%;
+        left: 350px;
+      }
+    }
+    .header_bg_member:nth-child(3) {
+      background: url(https://film-grab.com/wp-content/uploads/photo-gallery/Barbie_11.jpg?bwg=1699879307)
+        fixed;
+      background-size: cover;
+
+      .bg_title {
+        position: relative;
+        top: 55%;
+        left: 600px;
+        height: 0;
+        font-size: 30px;
+      }
+      .bg_member {
+        position: relative;
+        top: 60%;
+        left: 600px;
+      }
+    }
+  }
+}
+
+/* body */
+#home_body_wrap {
+  width: 100%;
+  position: absolute;
+  top: 100vh;
+}
+
+/* mini project info */
+#home_project_info {
+  width: 100%;
+  height: 300px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #999;
+
+  h3 {
+    flex: 1;
+    font-size: 70px;
+    padding: 50px;
+    color: #fff129;
+  }
+
+  p {
+    display: inline-block;
+    flex: 2;
+    padding: 50px;
+  }
+}
+
+/* member best */
+#home_member_best {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  h3 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  /* member best card */
+  #member_best_card_wrap {
+    width: 1600px;
+    height: 700px;
+    display: flex;
+    position: relative;
+
+    .member_best_btn {
+      color: #fff;
+      opacity: 0.5;
+      font-size: 80px;
+      background: none;
+      border: none;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .member_best_btn:hover {
+      opacity: 1;
+    }
+
+    #forward_btn {
+      right: 50px;
+    }
+
+    #backward_btn {
+      left: 50px;
+    }
+
+    .member_best_card {
+      width: 700px;
+      height: 400px;
+      position: absolute;
+      background: #fff;
+      color: #333;
+    }
+
+    .member_best_card.member_best_card_active1 {
+      top: 20%;
+      left: 450px;
+      z-index: 2;
+      box-shadow: 1px 1px 30px #999;
+      transition: 3s;
+    }
+
+    .member_best_card.member_best_card_active2 {
+      top: 30%;
+      left: 900px;
+      z-index: 1;
+      opacity: 0.7;
+      transition: 3s;
+    }
+
+    .member_best_card.member_best_card_active3 {
+      top: 30%;
+      left: 0;
+      z-index: 1;
+      opacity: 0.7;
+      transition: 3s;
+    }
+
+    #dh_best {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      h6 {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      p {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+
+    #mk_best {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      h6 {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      p {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+
+    #jh_best {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      h6 {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      p {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
