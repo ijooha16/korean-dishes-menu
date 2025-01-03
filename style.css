@@ -52,6 +52,10 @@ body {
   flex-direction: row;
   text-align: center;
   line-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 
   #logo_top {
     width: 100px;
@@ -136,23 +140,78 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
   background: #af8282;
   z-index: -100;
-  overflow: hidden;
 
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
+  #header_bg_wrap {
+    width: 300vw;
+    height: 100%;
+    display: flex;
 
-  p {
-    position: relative;
-    top: 50%;
-    left: 1500px;
-    width: 200ox;
-    height: 0;
-    transform: translateY(-50%);
-    font-size: 30px;
+    border: 1px solid #f00;
+
+    .header_bg_member {
+      width: 100vw;
+      height: 100%;
+    }
+
+    .header_bg_member:nth-child(1) {
+      background: url(./images/chungking_express.png) fixed;
+      background-size: cover;
+
+      .bg_title {
+        position: relative;
+        top: 50%;
+        left: 1500px;
+        width: 200ox;
+        height: 0;
+        transform: translateY(-50%);
+        font-size: 30px;
+      }
+      .bg_member {
+        position: relative;
+        top: 60%;
+        left: 1500px;
+      }
+    }
+    .header_bg_member:nth-child(2) {
+      background: url(./images/Wallace&Gromit.png) fixed;
+      background-size: cover;
+
+      .bg_title {
+        position: relative;
+        top: 50%;
+        left: 350px;
+        width: 200ox;
+        height: 0;
+        transform: translateY(-50%);
+        font-size: 30px;
+      }
+      .bg_member {
+        position: relative;
+        top: 60%;
+        left: 350px;
+      }
+    }
+    .header_bg_member:nth-child(3) {
+      background: url(https://film-grab.com/wp-content/uploads/photo-gallery/Barbie_11.jpg?bwg=1699879307)
+        fixed;
+      background-size: cover;
+
+      .bg_title {
+        position: relative;
+        top: 55%;
+        left: 600px;
+        height: 0;
+        font-size: 30px;
+      }
+      .bg_member {
+        position: relative;
+        top: 60%;
+        left: 600px;
+      }
+    }
   }
 }
 
@@ -195,7 +254,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
   padding: 50px;
 
   h3 {
@@ -205,16 +263,43 @@ body {
 
   /* member best card */
   #member_best_card_wrap {
-    width: 100%;
+    width: 1600px;
     height: 700px;
     display: flex;
     position: relative;
+
+    .member_best_btn {
+      color: #fff;
+      opacity: 0.5;
+      font-size: 80px;
+      background: none;
+      border: none;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .member_best_btn:hover {
+      opacity: 1;
+    }
+
+    #forward_btn {
+      right: 50px;
+    }
+
+    #backward_btn {
+      left: 50px;
+    }
 
     .member_best_card {
       width: 700px;
       height: 400px;
       position: absolute;
       background: #fff;
+      color: #333;
     }
 
     .member_best_card.member_best_card_active1 {
@@ -223,13 +308,15 @@ body {
       transform: translate(-50%, -50%);
       z-index: 2;
       box-shadow: 1px 1px 30px #999;
+      transition: 3s;
     }
 
     .member_best_card.member_best_card_active2 {
       top: 30%;
-      right: 0;
+      left: 900px;
       z-index: 1;
       opacity: 0.7;
+      transition: 3s;
     }
 
     .member_best_card.member_best_card_active3 {
@@ -237,6 +324,7 @@ body {
       left: 0;
       z-index: 1;
       opacity: 0.7;
+      transition: 3s;
     }
   }
 }

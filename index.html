@@ -47,6 +47,7 @@
         <div id="logo_top">
           <h3>MOVIE</h3>
         </div>
+
         <nav id="home_nav">
           <ul id="home_nav_main">
             <li>
@@ -68,14 +69,25 @@
             </li>
           </ul>
         </nav>
+
+        <hr />
       </header>
 
       <div id="home_header_bg">
-        <p>CHUNGKING<br />EXPRESS</p>
-        <img
-          src="https://assets.mubicdn.net/images/artworks/692689/images-original.png?1718796053"
-          alt="home_header_bg"
-        />
+        <ul id="header_bg_wrap">
+          <li class="header_bg_member">
+            <p class="bg_title">CHUNGKING<br />EXPRESS</p>
+            <p class="bg_member">Wong Karwai 1995</p>
+          </li>
+          <li class="header_bg_member">
+            <p class="bg_title">Wallace & Gromit<br />A Grand Day Out</p>
+            <p class="bg_member">Nick Park 1997</p>
+          </li>
+          <li class="header_bg_member">
+            <p class="bg_title">BarBie</p>
+            <p class="bg_member">Greta Gerwig 2023</p>
+          </li>
+        </ul>
       </div>
 
       <!-- home_body -->
@@ -97,9 +109,15 @@
         <article id="home_member_best">
           <h3>Member's Best Movie</h3>
           <ul id="member_best_card_wrap">
+            <button type="button" id="backward_btn" class="member_best_btn">
+              ＜
+            </button>
             <li class="member_best_card member_best_card_active1">도현</li>
             <li class="member_best_card member_best_card_active2">민경</li>
             <li class="member_best_card member_best_card_active3">주하</li>
+            <button type="button" id="forward_btn" class="member_best_btn">
+              ＞
+            </button>
           </ul>
         </article>
       </main>
