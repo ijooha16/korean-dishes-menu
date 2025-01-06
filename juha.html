@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,38 +34,64 @@
           s.parentNode.insertBefore(tk, s);
         })(document);
     </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+    </style>
     <script src="juha.js" defer></script>
     <script type="module" src="database.js"></script>
     <link rel="stylesheet" href="juha.css">
 </head>
 <body>
   <nav>
-    <svg id="back_btn" xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path fill="currentColor" fill-rule="evenodd" d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z"/></svg>
-    <h1 style="font-family: 'Prata';">Judy's fav movies</h1>
+    <div id="nav_txt">
+      <svg id="back_btn" xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"><path fill="currentColor" fill-rule="evenodd" d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z"/></svg>
+      <h1 class="serif">Judy's fav movies</h1>
+    </div>
+    <div id="add_btn" class="hide">+</div>
   </nav>
-  <header>
-    <div id="header_info">
-      <div>
-        <div id="title">Barbie</div>
-        <div class="vertical_container">
-          <div class="vertical" style="background-color: rgba(255, 255, 255, 0.6);"></div>
-          <div class="vertical_info highlight">
-            <div class="mid_title">★★★★★</div>
-            <div class="mid_title">Action | Romance | SF</div>
+  <div id="main_container">
+    <header>
+      <div id="header_info">
+        <div>
+          <div id="header_title" class="fw_bold">Barbie</div>
+          <div class="vertical_container">
+            <div class="vertical" style="background-color: rgba(255, 255, 255, 0.6);"></div>
+            <div class="vertical_info opacity">
+              <div class="fs_mid_title">★★★★★</div>
+              <div class="fs_mid_title">Action | Romance | SF</div>
+            </div>
           </div>
         </div>
+        <div id="info_right">
+          <div class="fs_mid_title fw_bold fc_main">STORY</div>
+          <hr>
+          <div class="fs_reg opacity">핵전쟁으로 멸망한 22세기. 얼마 남지 않은 물과 기름을 차지한 독재자 임모탄 조가 살아남은 인류를 지배한다. 한편, 아내와 딸을 잃고 살아남기 위해 사막을 떠돌던 맥스(톰 하디)는 임모탄의 부하들에게 납치되어 노예로 끌려가고, 폭정에 반발한 사령관 퓨리오사(샤를리즈 테론)는 인류 생존의 열쇠를 쥔 임모탄의 여인들을 탈취해 분노의 도로로 폭주한다. 이에 임모탄의 전사들과 신인류 눅스(니콜라스 홀트)는 맥스를 이끌고 퓨리오사의 뒤를 쫓는데... 끝내주는 날, 끝내주는 액션이 폭렬한다!</div>
+        </div>
       </div>
-      <div id="info_right">
-        <div class="mid_title highlight">REVIEW</div>
-        <hr>
-        <div class="txt">핵전쟁으로 멸망한 22세기. 얼마 남지 않은 물과 기름을 차지한 독재자 임모탄 조가 살아남은 인류를 지배한다. 한편, 아내와 딸을 잃고 살아남기 위해 사막을 떠돌던 맥스(톰 하디)는 임모탄의 부하들에게 납치되어 노예로 끌려가고, 폭정에 반발한 사령관 퓨리오사(샤를리즈 테론)는 인류 생존의 열쇠를 쥔 임모탄의 여인들을 탈취해 분노의 도로로 폭주한다. 이에 임모탄의 전사들과 신인류 눅스(니콜라스 홀트)는 맥스를 이끌고 퓨리오사의 뒤를 쫓는데... 끝내주는 날, 끝내주는 액션이 폭렬한다!</div>
+      <div id="overlay"></div>
+    </header>
+    <!-- <div id="add_btn">+</div> -->
+    <div id="content_margin">
+      <hr>
+    </div>
+    <p id="movie_list" class="fs_title fc_white fw_bold">Movie List</p>
+    <div id="contents_container">
+      <div id="cards_container">
+        <div class="cards" style="background-image: url('https://film-grab.com/wp-content/uploads/photo-gallery/Emma_012.jpg?bwg=1618570459');">
+          <div id="card_info" class="fc_white">
+            <div id="title" class="fs_title fw_bold">title</div>
+            <div id="star" class="fs_mid_title">★★★★★</div>
+            <div id="genre" class="fs_small opacity">ction | Romance | SF</div>
+            <div id="director" class="fs_small opacity">감독 dhlsdkfhkdshf</div>
+          </div>
+          <div class="card_overlay"></div>
+        </div>
+        <div class="cards">
+        </div>
+        <div class="cards">
+        </div>
       </div>
     </div>
-    <div id="overlay"></div>
-  </header>
-  <div id="content_container">
-    <form action="">
-    </form>
   </div>
 </body>
 </html>
